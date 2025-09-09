@@ -1,0 +1,6 @@
+ID,Name,Phone,Role,Password
+USER001,أحمد الإدارة المالية,+222 11111111,Admin,admin123
+USER002,فاطمة المحاسبة الرئيسية,+222 22222222,Assistant,assistant123
+USER003,محمد المستثمر الرئيسي,+222 33333333,Investor,investor123
+USER004,خديجة المستثمرة المؤسسة,+222 44444444,Investor,investor123
+USER005,عمر مدير العمليات,+222 55555555,Assistant,operations123

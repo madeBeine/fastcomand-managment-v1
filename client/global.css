@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Force English numbers throughout the app */
+  * {
+    font-variant-numeric: normal;
+  }
+
+  .number {
+    direction: ltr;
+    unicode-bidi: bidi-override;
+  }
+
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Investment App Colors - Based on Logo */
+    --investment-primary-50: 220 100% 98%;
+    --investment-primary-100: 220 85% 95%;
+    --investment-primary-200: 220 78% 90%;
+    --investment-primary-300: 220 70% 80%;
+    --investment-primary-400: 220 62% 65%;
+    --investment-primary-500: 220 78% 29%;
+    --investment-primary-600: 220 85% 25%;
+    --investment-primary-700: 220 90% 20%;
+    --investment-primary-800: 220 95% 15%;
+    --investment-primary-900: 220 98% 10%;
+    --investment-primary-950: 220 100% 8%;
+
+    /* Secondary Colors (Orange from logo) */
+    --investment-secondary-50: 35 100% 97%;
+    --investment-secondary-100: 35 100% 94%;
+    --investment-secondary-200: 35 100% 88%;
+    --investment-secondary-300: 35 100% 78%;
+    --investment-secondary-400: 35 100% 66%;
+    --investment-secondary-500: 35 100% 50%;
+    --investment-secondary-600: 35 95% 45%;
+    --investment-secondary-700: 35 90% 40%;
+    --investment-secondary-800: 35 85% 35%;
+    --investment-secondary-900: 35 80% 25%;
+
+    --investment-success-50: 138 76% 97%;
+    --investment-success-500: 138 62% 47%;
+    --investment-success-600: 138 74% 40%;
+
+    --investment-warning-50: 48 100% 96%;
+    --investment-warning-500: 48 96% 53%;
+    --investment-warning-600: 32 95% 44%;
+
+    --investment-error-50: 0 86% 97%;
+    --investment-error-500: 0 84% 60%;
+    --investment-error-600: 0 72% 51%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Investment App Colors - Dark Mode */
+    --investment-primary-50: 220 100% 8%;
+    --investment-primary-100: 220 98% 10%;
+    --investment-primary-200: 220 95% 15%;
+    --investment-primary-300: 220 90% 20%;
+    --investment-primary-400: 220 85% 25%;
+    --investment-primary-500: 220 78% 29%;
+    --investment-primary-600: 220 62% 65%;
+    --investment-primary-700: 220 70% 80%;
+    --investment-primary-800: 220 78% 90%;
+    --investment-primary-900: 220 85% 95%;
+    --investment-primary-950: 220 100% 98%;
+
+    /* Secondary Colors - Dark Mode */
+    --investment-secondary-50: 35 80% 25%;
+    --investment-secondary-100: 35 85% 35%;
+    --investment-secondary-200: 35 90% 40%;
+    --investment-secondary-300: 35 95% 45%;
+    --investment-secondary-400: 35 100% 50%;
+    --investment-secondary-500: 35 100% 66%;
+    --investment-secondary-600: 35 100% 78%;
+    --investment-secondary-700: 35 100% 88%;
+    --investment-secondary-800: 35 100% 94%;
+    --investment-secondary-900: 35 100% 97%;
+
+    --investment-success-50: 138 62% 8%;
+    --investment-success-500: 138 62% 47%;
+    --investment-success-600: 138 74% 55%;
+
+    --investment-warning-50: 48 96% 8%;
+    --investment-warning-500: 48 96% 53%;
+    --investment-warning-600: 32 95% 60%;
+
+    --investment-error-50: 0 84% 8%;
+    --investment-error-500: 0 84% 60%;
+    --investment-error-600: 0 72% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cairo', 'Noto Sans Arabic', sans-serif;
+    direction: rtl;
+  }
+
+  .ltr {
+    direction: ltr;
+  }
+
+  .number {
+    font-family: 'Inter', monospace;
+    direction: ltr;
+    display: inline-block;
+  }
+
+  /* Mobile navigation scrollbar styling */
+  .mobile-nav-scroll {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  .mobile-nav-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  /* Safe area support for mobile bottom navigation */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  /* Improved scrollbar styling */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
